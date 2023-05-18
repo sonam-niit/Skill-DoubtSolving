@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data=[];
+        function loaddata(method){
+            //passing a function as a para called callbacks
+            setTimeout(loaded(method),3000)
+        }
+        function loaded(callback){
+            data.push({id:1,name:"alex"})
+            data.push({id:2,name:"bob"})
+            data.push({id:3,name:"catty"})
+            data.push({id:4,name:"devid"})
+            //function will execute when the data loaded successfully
+            console.log("Data loaded successfully")
+            callback(); 
+        }
+        function display(){
+            console.log("display the loaded data")
+            data.forEach(ele=>console.log(ele))
+        }
+
+        loaddata(display);
+    </script>
+</body>
+</html>

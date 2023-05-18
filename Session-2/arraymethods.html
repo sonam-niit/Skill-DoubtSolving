@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const array = [1, 2, 3, 4, 5, 6, 7, 8];
+        const mappedArray = array.map((x) => x + 100);
+        console.log(mappedArray);
+
+        const filteredArray = array.filter((e) => e % 2 == 0);
+        console.log(filteredArray)
+
+        const arr = [73, 90, 34, 27, 6, 45];
+        const asc = arr.sort((a, b) => a > b ? 1 : -1);
+        console.log("Ascending Order: ", asc)
+        const desc = arr.sort((a, b) => a > b ? -1 : 1);
+        console.log("Descending order: ", desc)
+
+        const arr1 = ["alex", "apple", "alexander", "price", "alizabeth"];
+        const sorted = arr1.sort((a, b) => a > b ? 1 : -1);
+        console.log("Sorted Alphabets ", sorted)
+
+        arr1.forEach(ele => {
+            console.log(ele)
+        })
+
+        const fname = ["alex", "bob", "catt"]
+        const lname = ["devid", 'john', 'baarreto'];
+        const concat = fname.concat(lname);
+        console.log(concat);
+
+        const validForVote = arr.every(num => num >= 18);
+        if (validForVote) {
+            console.log("All users are valid for vote")
+        } else { console.log("Not valid for vote") }
+
+        const result = [35, 46, 92, 78, 89, 47, 92];
+        const moreThan90 = result.some(ele => ele >= 90);
+        console.log(moreThan90)
+
+        console.log(result.includes(35));
+        console.log(result.find(e => e == 92));
+
+        const data = ["a", "b", "c", "d", "e", "f"];
+        console.log(data.join("-"))
+
+        console.log(result.findIndex(e => e == 92))
+
+        //find all elements index with same values
+        // result.filter((value,index)=>{
+        //     if(value==92)
+        //         console.log(index)
+        // })
+
+        const myFunction = function (ele, index) {
+            if (ele % 2 == 0) {
+                console.log(index + " " + ele)
+            }
+        }
+        console.log(result.filter(myFunction))
+
+        console.log(result.indexOf(92));
+
+        let myArray = new Array(3); //array with its size
+        myArray.fill(20);//insert 20 into your array
+        //these array can have 3 elements
+        let x = 20;
+        for(let i=0;i<myArray.length;i++){
+            myArray[i]=x; //myArray.fill(x,i,i+1)
+            x++;
+        }
+        console.log(myArray);
+
+        const revarray= arr.reverse();
+
+        
+    </script>
+</body>
+
+</html>

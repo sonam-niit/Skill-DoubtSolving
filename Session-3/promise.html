@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=14;
+        //promise creation
+        const promise= new Promise((resolve,reject)=>{
+            if(num>=18){
+                resolve("Valid for Vote")
+            }
+            else{
+                reject("Not valid")
+            }
+        })
+        //then you have to use and then and catch
+        // promise
+        // .then((res)=>{console.log("Resolved:  ",res)})
+        // .catch((err)=>{console.log("Error Occured ",err)})
+
+        //async and await
+        async function execute(){
+            try {
+                const res=await promise;
+                console.log(res)
+            } catch (error) {
+                console.log("Error Occured ",error)
+            }
+        }
+        execute();
+
+    </script>
+</body>
+</html>

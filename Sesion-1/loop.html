@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array=[1,2,3,4,5,6,7];
+
+        array.forEach((ele,inx)=> console.log(inx + " " +ele))
+
+        //iterate an array take one one element in x untill it reaches to the end
+        for(let x of array){
+            console.log(x);
+        }
+        //iterating an object with key value pair
+        const obj={id:1,name:"sonam",email:"sonam@gmail.com"}
+        for(let x in obj){
+            console.log(x+": "+ obj[x]);
+        }
+    </script>
+</body>
+</html>
